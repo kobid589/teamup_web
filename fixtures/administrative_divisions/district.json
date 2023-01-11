@@ -1,0 +1,695 @@
+[
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "1",
+      "name": "\u0924\u093e\u092a\u094d\u0932\u0947\u091c\u0941\u0919",
+      "name_eng": "Taplejung",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "2",
+      "name": "\u092a\u093e\u0902\u091a\u0925\u0930",
+      "name_eng": "Panchthar",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "3",
+      "name": "\u0907\u0932\u093e\u092e",
+      "name_eng": "Illam",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "4",
+      "name": "\u091d\u093e\u092a\u093e",
+      "name_eng": "Jhapa",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "5",
+      "name": "\u092e\u094b\u0930\u0919",
+      "name_eng": "Morang",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "6",
+      "name": "\u0938\u0941\u0928\u0938\u0930\u0940",
+      "name_eng": "Sunsari",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "7",
+      "name": "\u0927\u0928\u0915\u0941\u091f\u093e",
+      "name_eng": "Dhankuta",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "8",
+      "name": "\u0924\u0947\u0939\u094d\u0930\u0925\u0941\u092e",
+      "name_eng": "Terhathum",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "9",
+      "name": "\u0938\u0902\u0916\u0941\u0935\u093e\u0938\u092d\u093e",
+      "name_eng": "Sankhuwasabha",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "10",
+      "name": "\u092d\u094b\u091c\u092a\u0941\u0930",
+      "name_eng": "Bhojpur",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "11",
+      "name": "\u0938\u094b\u0932\u0941\u0916\u0941\u092e\u094d\u092c\u0941",
+      "name_eng": "Solukhumbu",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "12",
+      "name": "\u0913\u0916\u0932\u0922\u0941\u0902\u0917\u093e",
+      "name_eng": "Okhaldhunga",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "13",
+      "name": "\u0916\u094b\u091f\u093e\u0919",
+      "name_eng": "Khotang",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "14",
+      "name": "\u0909\u0926\u092f\u092a\u0941\u0930",
+      "name_eng": "Udayapur",
+      "state_id": "1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "15",
+      "name": "\u0938\u092a\u094d\u0924\u0930\u0940",
+      "name_eng": "Saptari",
+      "state_id": "2"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "16",
+      "name": "\u0938\u093f\u0930\u093e\u0939\u093e",
+      "name_eng": "Siraha",
+      "state_id": "2"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "17",
+      "name": "\u0927\u0928\u0941\u0937\u093e",
+      "name_eng": "Dhanusa",
+      "state_id": "2"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "18",
+      "name": "\u092e\u0939\u094b\u0924\u094d\u0924\u0930\u0940",
+      "name_eng": "Mahottari",
+      "state_id": "2"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "19",
+      "name": "\u0938\u0930\u094d\u0932\u093e\u0939\u0940",
+      "name_eng": "Sarlahi",
+      "state_id": "2"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "20",
+      "name": "\u0938\u093f\u0928\u094d\u0927\u0941\u0932\u0940",
+      "name_eng": "Sindhuli",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "21",
+      "name": "\u0930\u093e\u092e\u0947\u091b\u093e\u092a",
+      "name_eng": "Ramechhap",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "22",
+      "name": "\u0926\u094b\u0932\u0916\u093e",
+      "name_eng": "Dolakha",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "23",
+      "name": "\u0938\u093f\u0928\u094d\u0927\u0941\u092a\u093e\u0932\u094d\u091a\u094b\u0915",
+      "name_eng": "Sindhupalchok",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "24",
+      "name": "\u0915\u093e\u092d\u094d\u0930\u0947",
+      "name_eng": "Kavre",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "25",
+      "name": "\u0932\u0932\u093f\u0924\u092a\u0941\u0930",
+      "name_eng": "Lalitpur",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "26",
+      "name": "\u092d\u0915\u094d\u0924\u092a\u0941\u0930",
+      "name_eng": "Bhaktapur",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "27",
+      "name": "\u0915\u093e\u0920\u092e\u093e\u0921\u094c\u0901",
+      "name_eng": "Kathmandu",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "28",
+      "name": "\u0928\u0941\u0935\u093e\u0915\u094b\u091f",
+      "name_eng": "Nuwakot",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "29",
+      "name": "\u0930\u0938\u0941\u0935\u093e",
+      "name_eng": "Rasuwa",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "30",
+      "name": "\u0927\u093e\u0926\u093f\u0919",
+      "name_eng": "Dhading",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "31",
+      "name": "\u092e\u0915\u0935\u093e\u0928\u092a\u0941\u0930",
+      "name_eng": "Makwanpur",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "32",
+      "name": "\u0930\u094c\u0924\u0939\u091f",
+      "name_eng": "Rautahat",
+      "state_id": "2"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "33",
+      "name": "\u092c\u093e\u0930\u093e",
+      "name_eng": "Bara",
+      "state_id": "2"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "34",
+      "name": "\u092a\u0930\u094d\u0938\u093e",
+      "name_eng": "Parsa",
+      "state_id": "2"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "35",
+      "name": "\u091a\u093f\u0924\u0935\u0928",
+      "name_eng": "Chitawan",
+      "state_id": "3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "36",
+      "name": "\u0917\u094b\u0930\u0916\u093e",
+      "name_eng": "Gorkha",
+      "state_id": "4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "37",
+      "name": "\u0932\u092e\u091c\u0941\u0919",
+      "name_eng": "Lamjung",
+      "state_id": "4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "38",
+      "name": "\u0924\u0928\u0939\u0941\u0901",
+      "name_eng": "Tanahu",
+      "state_id": "4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "39",
+      "name": "\u0938\u094d\u092f\u093e\u0919\u094d\u091c\u093e",
+      "name_eng": "Syangja",
+      "state_id": "4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "40",
+      "name": "\u0915\u093e\u0938\u094d\u0915\u0940",
+      "name_eng": "Kaski",
+      "state_id": "4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "41",
+      "name": "\u092e\u0928\u093e\u0919",
+      "name_eng": "Manang",
+      "state_id": "4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "42",
+      "name": "\u092e\u0941\u0938\u094d\u0924\u093e\u0919",
+      "name_eng": "Mustang",
+      "state_id": "4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "43",
+      "name": "\u092e\u094d\u092f\u093e\u0917\u094d\u0926\u0940",
+      "name_eng": "Myagdi",
+      "state_id": "4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "44",
+      "name": "\u092a\u0930\u094d\u0935\u0924",
+      "name_eng": "Parbat",
+      "state_id": "4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "45",
+      "name": "\u092c\u093e\u0917\u094d\u0932\u0941\u0919",
+      "name_eng": "Baglung",
+      "state_id": "4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "46",
+      "name": "\u0917\u0941\u0932\u094d\u092e\u0940",
+      "name_eng": "Gulmi",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "47",
+      "name": "\u092a\u093e\u0932\u094d\u092a\u093e",
+      "name_eng": "Palpa",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "48",
+      "name": "\u0928\u0935\u0932\u092a\u0930\u093e\u0938\u0940 \u092a\u0941\u0930\u094d\u0935",
+      "name_eng": "Nawalparasi East",
+      "state_id": "4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "49",
+      "name": "\u0930\u0941\u092a\u0928\u094d\u0926\u0947\u0939\u0940",
+      "name_eng": "Rupandehi",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "50",
+      "name": "\u0915\u092a\u093f\u0932\u092c\u0938\u094d\u0924\u0941",
+      "name_eng": "Kapilbastu",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "51",
+      "name": "\u0905\u0930\u094d\u0918\u093e\u0916\u093e\u0901\u091a\u0940",
+      "name_eng": "Arghakhanchi",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "52",
+      "name": "\u092a\u094d\u092f\u0941\u0920\u093e\u0928",
+      "name_eng": "Pyuthan",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "53",
+      "name": "\u0930\u094b\u0932\u094d\u092a\u093e",
+      "name_eng": "Rolpa",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "54",
+      "name": "\u0930\u0941\u0915\u0941\u092e \u092a\u0941\u0930\u094d\u0935",
+      "name_eng": "Rukum East",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "55",
+      "name": "\u0938\u0932\u094d\u092f\u093e\u0928",
+      "name_eng": "Salyan",
+      "state_id": "6"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "56",
+      "name": "\u0926\u093e\u0919",
+      "name_eng": "Dang",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "57",
+      "name": "\u092c\u093e\u0901\u0915\u0947",
+      "name_eng": "Banke",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "58",
+      "name": "\u092c\u0930\u094d\u0926\u093f\u092f\u093e",
+      "name_eng": "Bardiya",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "59",
+      "name": "\u0938\u0941\u0930\u094d\u0916\u0947\u0924",
+      "name_eng": "Surkhet",
+      "state_id": "6"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "60",
+      "name": "\u0926\u0948\u0932\u0947\u0916",
+      "name_eng": "Dailekh",
+      "state_id": "6"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "61",
+      "name": "\u091c\u093e\u091c\u0930\u0915\u094b\u091f",
+      "name_eng": "Jajarkot",
+      "state_id": "6"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "62",
+      "name": "\u0921\u094b\u0932\u094d\u092a\u093e",
+      "name_eng": "Dolpa",
+      "state_id": "6"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "63",
+      "name": "\u091c\u0941\u092e\u094d\u0932\u093e",
+      "name_eng": "Jumla",
+      "state_id": "6"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "64",
+      "name": "\u0915\u093e\u0932\u093f\u0915\u094b\u091f",
+      "name_eng": "Kalikot",
+      "state_id": "6"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "65",
+      "name": "\u092e\u0941\u0917\u0941",
+      "name_eng": "Mugu",
+      "state_id": "6"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "66",
+      "name": "\u0939\u0941\u092e\u094d\u0932\u093e",
+      "name_eng": "Humla",
+      "state_id": "6"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "67",
+      "name": "\u092c\u093e\u091c\u0941\u0930\u093e",
+      "name_eng": "Bajura",
+      "state_id": "7"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "68",
+      "name": "\u092c\u091d\u093e\u0919",
+      "name_eng": "Bajhang",
+      "state_id": "7"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "69",
+      "name": "\u0905\u091b\u093e\u092e",
+      "name_eng": "Achham",
+      "state_id": "7"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "70",
+      "name": "\u0921\u094b\u091f\u0940",
+      "name_eng": "Doti",
+      "state_id": "7"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "71",
+      "name": "\u0915\u0948\u0932\u093e\u0932\u0940",
+      "name_eng": "Kailali",
+      "state_id": "7"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "72",
+      "name": "\u0915\u0928\u094d\u091a\u0928\u092a\u0941\u0930",
+      "name_eng": "Kanchanpur",
+      "state_id": "7"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "73",
+      "name": "\u0921\u0921\u0947\u0932\u094d\u0927\u0941\u0930\u093e",
+      "name_eng": "Dadeldhura",
+      "state_id": "7"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "74",
+      "name": "\u092c\u0948\u0924\u0921\u0940",
+      "name_eng": "Baitadi",
+      "state_id": "7"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "75",
+      "name": "\u0926\u093e\u0930\u094d\u091a\u0941\u0932\u093e",
+      "name_eng": "Darchaula",
+      "state_id": "7"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "76",
+      "name": "\u0928\u0935\u0932\u092a\u0930\u093e\u0938\u0940 \u092a\u0936\u094d\u091a\u093f\u092e ",
+      "name_eng": "Nawalparasi West",
+      "state_id": "5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.DistrictDetail",
+    "fields": {
+      "id": "77",
+      "name": "\u0930\u0941\u0915\u0941\u092e \u092a\u0936\u094d\u091a\u093f\u092e",
+      "name_eng": "Rukum West",
+      "state_id": "6"
+    }
+  }
+]

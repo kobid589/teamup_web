@@ -1,0 +1,65 @@
+[
+  {
+    "model": "NepalAdministrativeDivision.ProvincesDetail",
+    "fields": {
+      "id": "1",
+      "name": "\u092a\u094d\u0930\u0926\u0947\u0936 \u0928. \u0967",
+      "state_number": "1",
+      "name_eng": "Province No. 1"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.ProvincesDetail",
+    "fields": {
+      "id": "2",
+      "name": "\u092a\u094d\u0930\u0926\u0947\u0936 \u0928. \u0968",
+      "state_number": "2",
+      "name_eng": "Province No. 2"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.ProvincesDetail",
+    "fields": {
+      "id": "3",
+      "name": "\u092a\u094d\u0930\u0926\u0947\u0936 \u0928. \u0969",
+      "state_number": "3",
+      "name_eng": "Province No. 3"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.ProvincesDetail",
+    "fields": {
+      "id": "4",
+      "name": "\u092a\u094d\u0930\u0926\u0947\u0936 \u0928. \u096a",
+      "state_number": "4",
+      "name_eng": "Province No. 4"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.ProvincesDetail",
+    "fields": {
+      "id": "5",
+      "name": "\u092a\u094d\u0930\u0926\u0947\u0936 \u0928. \u096b",
+      "state_number": "5",
+      "name_eng": "Province No. 5"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.ProvincesDetail",
+    "fields": {
+      "id": "6",
+      "name": "\u092a\u094d\u0930\u0926\u0947\u0936 \u0928. \u096c",
+      "state_number": "6",
+      "name_eng": "Province No. 6"
+    }
+  },
+  {
+    "model": "NepalAdministrativeDivision.ProvincesDetail",
+    "fields": {
+      "id": "7",
+      "name": "\u092a\u094d\u0930\u0926\u0947\u0936 \u0928. \u096d",
+      "state_number": "7",
+      "name_eng": "Province No. 7"
+    }
+  }
+]
