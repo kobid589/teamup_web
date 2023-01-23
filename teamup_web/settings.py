@@ -45,6 +45,10 @@ INSTALLED_APPS = [
 ]
 
 INNER_APPS = [
+    'apps.NepalAdministrativeDivision',
+    'apps.Address',
+    'apps.Individual',
+    'apps.Organization',
 ]
 
 THIRD_PARTY_APPS = [

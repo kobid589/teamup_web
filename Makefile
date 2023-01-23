@@ -137,3 +137,6 @@ make loadnepaladmin:
 	docker exec -it teamup_web-web-1  python3 manage.py loaddata fixtures/administrative_divisions/district.json
 	docker exec -it teamup_web-web-1  python3 manage.py loaddata fixtures/administrative_divisions/municipality.json
 	docker exec -it teamup_web-web-1 python manage.py commands
+
+flush:
+	docker exec -it teamup_web-web-1 python manage.py flush
