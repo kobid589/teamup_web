@@ -40,7 +40,7 @@ class Individual(models.Model):
     remarks = models.TextField(verbose_name=_('Remarks'), max_length=255, blank=True, null=True)
     religions = models.CharField(verbose_name=_('Religions'), max_length=255, choices=RELIGIONS)
     ethnicity = models.CharField(verbose_name=_('Ethnicity'), max_length=255, choices=ETHNICITY)
-    date_of_birth = models.DateField(verbose_name=_('Date of Birth'), blank=True, null=True)
+    # date_of_birth = models.DateField(verbose_name=_('Date of Birth'), blank=True, null=True)
     created_date = models.DateField(verbose_name=_('Time of Death'), auto_now=True)
 
     #
@@ -60,13 +60,13 @@ class Individual(models.Model):
             max_level = max(Individual.objects.all(), key=lambda x: x.level).level + 1
         return max_level
 
-    @property
-    def date_of_birth_in_bs(self):
-        """converts bs to ad"""
-        dob = ''
-        try:
-            if self.date_of_birth:
-                dob = nepali_datetime.datetime.from_datetime_date(self.date_of_birth)
-        except Exception as e:
-            print('Exception raised::', e)
-        return dob
+    # @property
+    # def date_of_birth_in_bs(self):
+    #     """converts bs to ad"""
+    #     dob = ''
+    #     try:
+    #         if self.date_of_birth:
+    #             dob = nepali_datetime.datetime.from_datetime_date(self.date_of_birth)
+    #     except Exception as e:
+    #         print('Exception raised::', e)
+    #     return dob
