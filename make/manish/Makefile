@@ -21,13 +21,13 @@ u:
 	docker-compose -f docker-compose.prod.yml up
 
 mm:
-	docker exec -it teamup_web-web-1 python manage.py makemigrations
+	docker exec -it teamup_web_web_1 python manage.py makemigrations
 
 m:
-	docker exec -it teamup_web-web-1 python manage.py migrate
+	docker exec -it teamup_web_web_1 python manage.py migrate
 
 cs:
-	docker exec -it teamup_web-web-1 python manage.py collectstatic --noinput
+	docker exec -it teamup_web_web_1 python manage.py collectstatic --noinput
 
 d:
 	docker-compose -f docker-compose.prod.yml down
@@ -42,57 +42,57 @@ ddv:
 	docker-compose -f docker-compose.dev.yml down -v
 
 sweb:
-	docker exec -it teamup_web-web-1 python manage.py shell
+	docker exec -it teamup_web_web_1 python manage.py shell
 
 bweb:
-	docker exec -it teamup_web-web-1 bash
+	docker exec -it teamup_web_web_1 bash
 
 dweb:
 	docker exec -it banshabali_db_web_1 bash
 
 csu:
-	docker exec -it teamup_web-web-1 python manage.py createsuperuser
-	docker exec -it teamup_web-web-1 python manage.py createsuperuser
+	docker exec -it teamup_web_web_1 python manage.py createsuperuser
+	docker exec -it teamup_web_web_1 python manage.py createsuperuser
 
 nrw:
-	docker exec -it teamup_web-web-1 npm run watch
+	docker exec -it teamup_web_web_1 npm run watch
 
 nrp:
-	docker exec -it teamup_web-web-1 npm run production
+	docker exec -it teamup_web_web_1 npm run production
 
 nrtw:
-	docker exec -it teamup_web-web-1
+	docker exec -it teamup_web_web_1
  npm run tailwind:watch
 
 ni:
-	docker exec -it teamup_web-web-1 npm install
+	docker exec -it teamup_web_web_1 npm install
 
 lw:
-	docker logs teamup_web-web-1 -f
+	docker logs teamup_web_web_1 -f
 
 ld:
 	docker logs banshabali_db_web_1
 
 r:
-	docker restart teamup_web-web-1
+	docker restart teamup_web_web_1
 
 	docker restart banshabali_db_web_1
 
 rweb:
-	docker restart teamup_web-web-1
+	docker restart teamup_web_web_1
 
-	docker exec -it teamup_web-web-1 pip install -r dependencies/dev_requirements.txt
+	docker exec -it teamup_web_web_1 pip install -r dependencies/dev_requirements.txt
 msg:
-	docker exec -it teamup_web-web-1 python manage.py makemessages -l ne
+	docker exec -it teamup_web_web_1 python manage.py makemessages -l ne
 
 cmsg:
-	docker exec -it teamup_web-web-1 python manage.py compilemessages
+	docker exec -it teamup_web_web_1 python manage.py compilemessages
 
 idr:
-	docker exec -it teamup_web-web-1 pip install -r dependencies/dev_requirements.txt
+	docker exec -it teamup_web_web_1 pip install -r dependencies/dev_requirements.txt
 
 iar:
-	docker exec -it teamup_web-web-1 pip install -r dependencies/apt_requirements.txt
+	docker exec -it teamup_web_web_1 pip install -r dependencies/apt_requirements.txt
 
 dd:
 	docker exec -t banshabali_db_web_1  pg_dump -c -U postgres > dump_data11.sql
@@ -101,7 +101,7 @@ dr:
 	cat dump_data10.sql | sudo docker exec -i banshabali_db_web_1 psql -U postgres
 
 cmd:
-	docker exec -it teamup_web-web-1 python manage.py commands
+	docker exec -it teamup_web_web_1 python manage.py commands
 
 newdev:
 	make buddev
@@ -133,10 +133,10 @@ ch_own:
 	sudo chown -R matrix-pc2 ../chilime
 
 make loadnepaladmin:
-	docker exec -it teamup_web-web-1  python3 manage.py loaddata fixtures/administrative_divisions/province.json
-	docker exec -it teamup_web-web-1  python3 manage.py loaddata fixtures/administrative_divisions/district.json
-	docker exec -it teamup_web-web-1  python3 manage.py loaddata fixtures/administrative_divisions/municipality.json
-	docker exec -it teamup_web-web-1 python manage.py commands
+	docker exec -it teamup_web_web_1  python3 manage.py loaddata ../../fixtures/administrative_divisions/province.json
+	docker exec -it teamup_web_web_1  python3 manage.py loaddata ../../fixtures/administrative_divisions/district.json
+	docker exec -it teamup_web_web_1  python3 manage.py loaddata ../../fixtures/administrative_divisions/municipality.json
+	docker exec -it teamup_web_web_1 python manage.py commands
 
 flush:
-	docker exec -it teamup_web-web-1 python manage.py flush
+	docker exec -it teamup_web_web_1 python manage.py flush
