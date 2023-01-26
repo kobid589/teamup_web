@@ -42,13 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "bootstrap3",
 ]
 
 INNER_APPS = [
     'apps.NepalAdministrativeDivision',
     'apps.Address',
     'apps.Individual',
-    'apps.Organization',
+    'apps.Organization'
 ]
 
 THIRD_PARTY_APPS = [
@@ -93,6 +94,22 @@ if (os.environ.get('DJANGO_DEBUG', 'True') == 'True'):
     TEMPLATES = [dev_template_config]
 else:
     TEMPLATES = [prod_template_config]
+
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [BASE_DIR/'templates'],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    },
+]
 
 DATABASES = {
     'default': {

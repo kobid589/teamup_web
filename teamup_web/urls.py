@@ -18,8 +18,10 @@ from django.shortcuts import render
 from django.urls import path
 
 from core.views import index
+from apps.Individual.views import profile
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index')
+    path('', index, name='index'),
+    path('profiles', profile, name='info')
 ]

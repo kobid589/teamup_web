@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from models import Individual
+from apps.Individual.models import Individual
 
 
-def index(request):
-    return (render,)
+def profile(request):
+    info_list = Individual.objects.all()
+    return render(request, 'profiles.html',
+                  {'info_list': info_list})
