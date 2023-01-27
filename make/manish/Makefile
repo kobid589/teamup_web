@@ -2,17 +2,17 @@ b:
 	docker-compose -f docker-compose.prod.yml build
 
 bud:
-	docker-compose -f docker-compose.prod.yml up -d --build
+	docker-compose -f ../../docker-compose.prod.yml up -d --build
 
 buddev:
-	sudo docker-compose -f docker-compose.dev.yml up -d --build
+	sudo docker-compose -f ../../docker-compose.dev.yml up -d --build
 
 ud:
 	docker-compose -f docker-compose.prod.yml up -d
 
 
 udev:
-	docker-compose -f docker-compose.dev.yml up -d
+	docker-compose -f ../../docker-compose.dev.yml up -d
 
 rdev:
 	python manage.py runserver
