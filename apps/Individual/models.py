@@ -1,7 +1,7 @@
 import os
 from uuid import uuid4
 
-import nepali_datetime
+# import nepali_datetime
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 

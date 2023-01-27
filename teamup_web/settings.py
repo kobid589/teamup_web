@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Skills',
+    'Expertise',
 ]
 
 INNER_APPS = [
@@ -125,7 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 CSRF_TRUSTED_ORIGINS = [
-    'http://5.189.132.142:1020'
+    'http://5.189.132.142:2023'
 ]
 
 # Internationalization
