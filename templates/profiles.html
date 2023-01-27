@@ -5,8 +5,10 @@
 
 <body>
 {% block content %}
+
         <div class="row"></div>
             {% for individual in info_list %}
+                {{individual.photo}}
                 <div class="col"></div>
         <div class="card" style="width: 18rem;">
             <img src="{{individual.photo}}" class="card-img-top" alt="...">
