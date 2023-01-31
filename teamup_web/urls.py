@@ -18,14 +18,15 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.shortcuts import render
 from django.urls import path
-
 from core.views import index
+from login import views
 from apps.Individual.views import profile
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('profiles', profile, name='info')
+    path('profiles', profile, name='info'),
+    path('login', views.makelogin),
 ]
 
 if settings.DEBUG:
