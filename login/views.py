@@ -11,4 +11,4 @@ def logincomplete(request):
     data=login(username_email=user,password=password)
     data.save()
 
-    return render(request , 'welcome.html')
+    return render(request, 'welcome.html')

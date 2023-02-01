@@ -1,0 +1,97 @@
+body{
+    background: #4CAF50;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+    color:black;
+   
+
+}
+a:hover{
+    color: #4CAF50;
+}
+
+a.n13{
+    text-decoration: none;
+}
+a.n13:hover{
+    color:white !important;
+}
+div.n1{
+    padding: 13px 0px;
+      
+}
+div.n2{
+   padding:13px 0px;
+}
+div.n2{
+    padding:13px 0px;
+}
+div.n3{
+    padding:13px 0px;
+}
+div.n4{
+    padding:13px 0px;
+}
+div.n5{
+    padding:13px 0px;
+}
+div.n6{
+    padding:13px 0px;
+}
+div.n7{
+    padding-top: 13px;
+   
+    
+}
+
+input{
+    width: 90%;
+    padding: 7px 0px;
+    margin: 3px 0px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-color: black;
+    outline-color:#4CAF50;
+    font-size: 17px;
+
+}
+
+div.n6 button{
+    background-color: #4CAF50;
+    width:90% ;
+    padding: 6px 0px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+p.n7{
+    font-size: 11px;
+}
+
+p.n8{
+    font-size: 15px;
+}
+div.n10{
+    background-color: white;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-left: 36px;
+    border-radius: 9px;
+    margin-top: 2%;
+}
+
+div.n11{
+    padding-bottom: 5px;
+}
+div.n12{
+    font-size: 11px;
+    padding-left: 28px;
+}
+
+p.n8{
+    margin-left: 38%;
+}
