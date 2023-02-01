@@ -5,29 +5,29 @@
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
-    
 </head>
 <body>
     
     <div class="n9">
-        <form id='submitform' action="#" method="post">
+        <form id='submitform' action="{% url 'savelogin' %}" method="post">
+          {% csrf_token %}    <!-- action url name bata access hunxa-->
             <div class="n1">
                 <label for="username">Username / Email</label>
                 <br>
-                <input type="text">
+                <input type="text" name="username_email">
             </div>
 
             <div class="n2">
                 <label for="password">Password
                     <a href="#" class="n3">Forgot?</a>
                     <br>
-                <input type="password">
+                <input type="password" name="password">
                 </label>
             </div>
 
             <div  class="n4">
                 <input type="checkbox">
-                <label for="checbox">Remember me?</label>
+                <label for="checkbox">Remember me?</label>
             </div>
 
             <div class="n5">
