@@ -182,8 +182,8 @@ WEBPACK_LOADER = {
     },
 }
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
+MEDIA_URL = 'media/individual/'
+MEDIA_ROOT = os.path.join(DATA_DIR, 'media/individual/')
 
 STATIC_URL = '/public/'
 # use in deployment

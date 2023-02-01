@@ -1,26 +1,19 @@
-{% extends 'base.html' %}
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
+<head>
+    <title>Profiles</title>
+     {% load static%}
+    <link rel="stylesheet" href="{% static 'profiles.css' %}">
+</head>
 <body>
-{% block content %}
-
-        <div class="row"></div>
-            {% for individual in info_list %}
-                {{individual.photo}}
-                <div class="col"></div>
-        <div class="card" style="width: 18rem;">
-            <img src="{{individual.photo}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{ individual.first_name}} {{ individual.last_name }}</h5>
-                <p class="card-text">{{ individual.remarks }}
-                    </p>
-                <a href="#" class="btn btn-primary">Open Profile</a>
-  </div>
-            {% endfor %}
+<div class="card">
+    <!--{% for individual in info_list %} -->
+   <img src="{{ individual.photo }}" width="100%">
+    <h1>  {{ individual.first_name }}  {{ individual.last_name }}  </h1>
+    <p class="expertise"> Contact: {{ individual.contact }}</p>
+    <p class="email"> {{individual.email}}</p>
+    <p> <button> TeamUp </button></p>
+    {% endfor %}
 </div>
-{% endblock %}
-
 </body>
 </html>

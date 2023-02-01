@@ -10,7 +10,7 @@ from core.model_constants import GENDER, RELIGIONS, ETHNICITY
 
 
 def path_and_rename(instance, filename):
-    upload_to = 'individual/'
+    upload_to = 'media/'
     ext = filename.split('.')[-1]
     # get filename
     if instance.pk:
@@ -45,7 +45,8 @@ class Individual(models.Model):
 
     #
     address = models.ForeignKey(Address, blank=True, null=True,
-                                on_delete=models.SET_NULL, related_name='addresses')
+                            on_delete=models.SET_NULL, related_name='addresses')
+
     # def __str__(self):
     #     return '%s' % (
     #             self.first_name + ' - (ID : ' + self.id.__str__() + ', Generation : ' + self.get_level().__str__() + ')')
