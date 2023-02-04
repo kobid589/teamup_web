@@ -1,0 +1,96 @@
+<style>
+    .filter-options-container {
+        position: absolute;
+        top: var(--top-navigation-height);
+        left: 0;
+        background-color: var(--translucent-card-color);
+        backdrop-filter: blur(7px);
+        box-shadow: 10px 10px 10px var(--shadow);
+        min-height: 400px;
+        border-bottom: 1px solid var(--border-color);
+        width: 100%;
+    }
+
+    input[type=checkbox] {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+
+    label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 60px;
+        height: 20px;
+        background: grey;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+    }
+
+    label:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 90px;
+        transition: 0.3s;
+    }
+
+    input:checked + label {
+        background: var(--primary);
+    }
+
+    input:checked + label:after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+    }
+
+    label:active:after {
+        width: 130px;
+    }
+
+    .input-and-icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 300px;
+        padding: 10px 0;
+    }
+
+    .input-icon {
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+<div class="filter-options-container">
+    <br>
+    <div class="container">
+        <div class="all-filters-container">
+            <div class="language-filter">
+                <h3 class="teko">Languages</h3>
+                <hr>
+                {% include 'partials/filter_option_toggle.html' with id='dart' label='Dart' %}
+                {% include 'partials/filter_option_toggle.html' with id='python' label='Python' %}
+                {% include 'partials/filter_option_toggle.html' with id='js' label='Javascript' %}
+                {% include 'partials/filter_option_toggle.html' with id='C++' label='C++' %}
+            </div>
+            <br><br><br>
+            <div class="language-filter">
+                <h3 class="teko">Skills</h3>
+                <hr>
+                {% include 'partials/filter_option_toggle.html' with id='ai' label='Artificial Intelligence' %}
+                {% include 'partials/filter_option_toggle.html' with id='ux' label='User Experience' %}
+                {% include 'partials/filter_option_toggle.html' with id='ui' label='User Interface' %}
+                {% include 'partials/filter_option_toggle.html' with id='cv' label='Computer Vision' %}
+                {#                <hr>#}
+            </div>
+            <br><br><br>
+        </div>
+
+    </div>
+</div>
