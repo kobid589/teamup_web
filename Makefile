@@ -52,7 +52,6 @@ dweb:
 
 csu:
 	docker exec -it teamup_web-web-1 python manage.py createsuperuser
-	docker exec -it teamup_web-web-1 python manage.py createsuperuser
 
 nrw:
 	docker exec -it teamup_web-web-1 npm run watch
