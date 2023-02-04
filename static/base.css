@@ -154,7 +154,6 @@ body, html {
 }
 
 
-
 .navigation {
     --background-color: var(--navigation-color);
     --tint-color: black;
@@ -675,4 +674,13 @@ select, input {
     display: block;
 
 
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: var(--primary);
+    padding: 8px 20px;
+    color: white;
+    border-radius: 8px;
 }
