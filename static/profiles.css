@@ -174,9 +174,10 @@
     color: #cecece;
     font-weight: 300;
 }
-.action .menu ul{
-    margin:0;
-    padding:0;
+
+.action .menu ul {
+    margin: 0;
+    padding: 0;
 }
 
 .action .menu ul li {
@@ -205,14 +206,26 @@
     transition: 0.2s;
 }
 
-.action .menu ul li  {
+.action .menu ul li {
     /*background-color: var(--primary);*/
-    padding:8px 20px;
-    border-radius:8px;
+    padding: 8px 20px;
+    border-radius: 8px;
     /*color: white;*/
 }
-.action .menu ul li:hover  {
+
+.action .menu ul li:hover {
     background-color: var(--primary);
     color: white;
 }
 
+
+.team-up-button {
+    background-color: var(--border-color);
+    color: var(--primary-text);
+    width: 100%;
+}
+
+.team-up-button:hover {
+    background-color: var(--primary);
+    color: white;
+}

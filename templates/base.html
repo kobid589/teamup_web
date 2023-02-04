@@ -22,13 +22,14 @@
                     <a href=""
                        style="text-decoration:none;color:var(--tint-color);font-family: var(--teko)">
                         <h4>TeamUp</h4></a>
-
                 </div>
 
                 <div class="col-sm-10 col-md-4 col-lg-6"
                      style="display: flex; align-items: center; justify-content: center">
                     <form action="" class="search">
-                        <input style="min-width:600px;" type="text" placeholder="Search for skills, people, expertise ...">
+                        <input style="min-width:600px;" type="text"
+                               placeholder="Search for skills, people, expertise ...">
+                        {% include 'partials/filter_options.html' %}
                     </form>
                 </div>
 

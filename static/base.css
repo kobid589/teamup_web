@@ -9,6 +9,7 @@ ROOT CSS VARIABLES AND CONFIGS
     :root {
         --main-background-color: #11161a;
         --card-background-color: #1d2126;
+        --translucent-card-color : rgba(29, 33, 38, 0.8);
         --navigation-color: var(--card-background-color);
         --border-color: rgba(255, 255, 255, 0.12);
         --primary: #4398ec;
@@ -50,6 +51,7 @@ form, label, fieldset, address, p {
     :root {
         --main-background-color: #e9f0f6;
         --card-background-color: #f2fcff;
+        --translucent-card-color: rgba(242, 252, 255, 0.8);
         --navigation-color: var(--card-background-color);
         --border-color: rgba(0, 0, 0, 0.28);
         --primary: #ff7e15;
@@ -152,7 +154,6 @@ body, html {
 .roboto {
     font-family: var(--roboto) !important;
 }
-
 
 
 .navigation {
@@ -675,4 +676,13 @@ select, input {
     display: block;
 
 
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: var(--primary);
+    padding: 8px 20px;
+    color: white;
+    border-radius: 8px;
 }

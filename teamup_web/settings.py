@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Skills',
-    'Expertise',
+    'apps.Expertise',
 ]
 
 INNER_APPS = [
