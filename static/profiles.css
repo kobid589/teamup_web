@@ -1,35 +1,218 @@
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: "Arial";
+.profiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.profile-card {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--card-background-color);
+    border-radius: 10px;
+    transform: translateY(100px);
+    border: 2px solid transparent;
+    /*overflow: hidden;*/
+    /*max-width: 300px;*/
+    transition: all 0.1s ease-in-out;
+}
+
+.profile-card:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.08);
+    border: 2px solid var(--primary);
+    transform: scale(1.1) translateY(100px);;
+}
+
+.profile-card:hover .profile-image {
+    transform: scale(1.1) translateY(-70px);
+    box-shadow: 30px 30px 20px var(--shadow);
+
+}
+
+.profile-info {
+    padding: 20px;
 }
 
 
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+.expertise {
+    color: grey;
+    font-size: 18px;
 }
 
-.expertise{
-  color: grey;
-  font-size: 18px;
+.email {
+    color: black;
+    font-size: 18px;
 }
 
-.email{
-  color: black;
-  font-size: 18px;
+
+.profile-image-container {
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
 }
 
-button:hover, a:hover {
-  opacity: 0.7;
+.profile-image {
+    height: 200px;
+    width: 200px;
+    transform: translateY(-50px);
+
+    position: absolute;
+    border-radius: 100px;
+    object-fit: cover;
+    border: 5px solid var(--card-background-color);
+    box-shadow: 10px 10px 10px var(--shadow);
+
+    transition: all 0.2s ease-in-out;
+
 }
+
+.languages-known {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.language-item img {
+    max-height: 20px;
+}
+
+.expertise {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.expertise-item {
+    background-color: var(--shadow);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+.faculty-and-year {
+    font-size: 0.8rem;
+}
+
+
+/*Profile dropdown*/
+
+/*.action {*/
+/*    position: fixed;*/
+/*    top: 20px;*/
+/*    right: 30px;*/
+/*}*/
+
+.action .profile {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.action .profile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.action .menu {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    padding: 10px 20px;
+    background: var(--card-background-color);
+    /*width: 200px;*/
+    /*box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);*/
+    box-shadow: 10px 10px 20px var(--shadow);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    transition: 0.2s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.action .menu.active {
+    top: 80px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.action .menu::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    background: var(--card-background-color);
+    transform: rotate(45deg);
+}
+
+.action .menu h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    font-weight: 500;
+    /*color: #555;*/
+    line-height: 1.5em;
+}
+
+.action .menu h3 span {
+    font-size: 14px;
+    color: #cecece;
+    font-weight: 300;
+}
+.action .menu ul{
+    margin:0;
+    padding:0;
+}
+
+.action .menu ul li {
+    list-style: none;
+    padding: 16px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+.action .menu ul li img {
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.action .menu ul li:hover img {
+    opacity: 1;
+}
+
+.action .menu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--secondary-text);
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.action .menu ul li  {
+    /*background-color: var(--primary);*/
+    padding:8px 20px;
+    border-radius:8px;
+    /*color: white;*/
+}
+.action .menu ul li:hover  {
+    background-color: var(--primary);
+    color: white;
+}
+
