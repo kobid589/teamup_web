@@ -50,7 +50,7 @@ INNER_APPS = [
     'apps.NepalAdministrativeDivision',
     'apps.Address',
     'apps.Individual',
-    'apps.Organization',
+    'apps.Organization'
 ]
 
 THIRD_PARTY_APPS = [
@@ -91,7 +91,7 @@ ROOT_URLCONF = 'teamup_web.urls'
 if not DEBUG:
     SECURE_BROWSER_XSS_FILTER = True
 
-if (os.environ.get('DJANGO_DEBUG', 'True') == 'True'):
+if os.environ.get('DJANGO_DEBUG', 'True') == 'True':
     TEMPLATES = [dev_template_config]
 else:
     TEMPLATES = [prod_template_config]
@@ -182,8 +182,8 @@ WEBPACK_LOADER = {
     },
 }
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
+MEDIA_URL = 'media/individual/'
+MEDIA_ROOT = os.path.join(DATA_DIR, 'media/individual/')
 
 STATIC_URL = '/public/'
 # use in deployment
@@ -200,3 +200,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = "/dashboard/"
 LOGOUT_REDIRECT_URL = '/'
+
+
