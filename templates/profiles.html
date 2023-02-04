@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Profiles</title>
-     {% load static%}
-    <link rel="stylesheet" href="{% static 'profiles.css' %}">
-</head>
-<body>
-<div class="card">
-    <!--{% for individual in info_list %} -->
-   <img src="{{ individual.photo }}" width="100%">
-    <h1>  {{ individual.first_name }}  {{ individual.last_name }}  </h1>
-    <p class="expertise"> Contact: {{ individual.contact }}</p>
-    <p class="email"> {{individual.email}}</p>
-    <p> <button> TeamUp </button></p>
-    {% endfor %}
-</div>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block main %}
+    {% with page_title='Profiles' %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock main %}
+{% block content %}
+    <div class="container">
+        <div class="profiles-container">
+            {% for individual in info_list %}
+                {#            <img src="{{ individual.photo }}" width="100%">#}
+                {% include 'partials/profile_item.html' with individual=individual %}
+                {% include 'partials/profile_item.html' with individual=individual %}
+                {% include 'partials/profile_item.html' with individual=individual %}
+                {% include 'partials/profile_item.html' with individual=individual %}
+            {% endfor %}
+        </div>
+
+    </div>
+
+{% endblock content %}

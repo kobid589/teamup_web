@@ -1,0 +1,31 @@
+<div class="action">
+    <div class="profile" onclick="menuToggle();">
+        <img src="https://picsum.photos/200"/>
+    </div>
+    <div class="menu">
+        <h3>Someone Famous<br/><span>Website Designer</span></h3>
+        <ul>
+            <li>
+                <i class="fa fa-user mx-2"></i><a href="#">My profile</a>
+            </li>
+            <li>
+                <i class="fa fa-edit mx-2"></i><a href="#">Edit profile</a>
+            </li>
+            <li>
+                <i class="fa fa-users mx-2"></i><a href="#">Teams</a>
+            </li>
+            <li>
+                <i class="fa fa-gears mx-2"></i><a href="#">Setting</a>
+            </li>
+            <li>
+                <i class="fa fa-sign-in mx-2"></i><a href="#">Logout</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    function menuToggle() {
+        const toggleMenu = document.querySelector(".menu");
+        toggleMenu.classList.toggle("active");
+    }
+</script>
