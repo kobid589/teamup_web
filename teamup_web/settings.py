@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'Skills',
     'Expertise',
     'login',
+    'apps.Expertise',
 ]
 
 INNER_APPS = [
