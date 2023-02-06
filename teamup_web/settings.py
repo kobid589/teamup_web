@@ -42,17 +42,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Skills',
-    'Expertise',
-    'login',
-    'apps.Expertise',
+
 ]
 
 INNER_APPS = [
     'apps.NepalAdministrativeDivision',
     'apps.Address',
     'apps.Individual',
-    'apps.Organization'
+    'apps.Organization',
+    'Skills',
+    'login',
+    'apps.Expertise',
 ]
 
 THIRD_PARTY_APPS = [
@@ -101,7 +101,7 @@ else:
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR/'templates'],
+        "DIRS": [BASE_DIR / 'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -113,7 +113,6 @@ TEMPLATES = [
         },
     },
 ]
-
 
 DATABASES = {
     'default': {
@@ -219,6 +218,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = "/dashboard/"
 LOGOUT_REDIRECT_URL = '/'
-
-
-

@@ -1,7 +1,9 @@
 <div>
     <div class="profile-card">
         <div class="profile-image-container">
-            <img class="profile-image" src="https://picsum.photos/200" width="100%">
+            {% for individual in info_list %}
+            <img class="profile-image" src="{{ individual.photo }}" width="100%">
+            {% endfor %}
         </div>
 
         <div class="profile-info">
