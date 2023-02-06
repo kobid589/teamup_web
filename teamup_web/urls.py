@@ -35,6 +35,7 @@ from apps.Individual.views import profile
 
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -45,8 +46,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('login', views.makelogin),
     path('welcome', views.logincomplete ,name='savelogin'),
-   #path('signup', views.makesignup),
-
+    #path('signup', views.makesignup),
 
 ]
 
