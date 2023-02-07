@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Sign Up page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+
+</head>
+<body>
+    
+    <div class="n9">
+
+        <div class="n10">
+
+
+            <form id="signupform" action="#" method="post">
+                <div class="n1">
+                    <label>First Name</label>
+                    <br>
+                    <input type="text" placeholder="" />
+                </div>
+                
+                <div class="n2">
+                    <label>Last Name</label>
+                    <br>
+                    <input type="text" placeholder="" />
+                </div>
+                
+                <div class="n3">
+                    <label>Email</label>
+                    <br>
+                    <input type="email" placeholder="" />
+                </div>
+                
+                <div class="n4">
+                    <label>Password</label>
+                    <br>
+                    <input type="password" placeholder="" />
+                </div>
+                
+                <div class="n5">
+                    <label>Confirm Password</label>
+                    <br>
+                    <input type="password" placeholder="" />
+                </div>
+            
+                <div class="n6">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+            <div class="n11">
+                <p class="n7">
+                    By clicking the Sign Up button, you agree to our <br>
+                    <div class="n12">
+                        <a href="#">Terms and Condition</a> and <a href="#"> Privacy Policy</a> 
+                    </div>
+                </p>
+            </div>
+
+        </div>
+
+        <p class="n8">
+            Already have an account? <a href="/login/login.html" class="n13">Login here</a>
+
+        </p>
+
+    </div>
+
+</body>
+</html>

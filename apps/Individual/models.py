@@ -5,9 +5,16 @@ from uuid import uuid4
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from apps.Address.models import Address
-from core.model_constants import GENDER, RELIGIONS, ETHNICITY
 
+from ProgrammingLanguage.models import ProgrammingLanguage
+from Team.models import Team
+from Experience.models import Experience
+from apps.Address.models import Address
+from apps.awards.models import Awards
+from apps.Project.models import Project
+from apps.Organization.models import Organization
+from core.model_constants import GENDER, RELIGIONS, ETHNICITY
+from apps.Expertise.models import Expertise
 
 def path_and_rename(instance, filename):
     upload_to = 'media/'
@@ -45,7 +52,23 @@ class Individual(models.Model):
 
     #
     address = models.ForeignKey(Address, blank=True, null=True,
-                            on_delete=models.SET_NULL, related_name='addresses')
+                                on_delete=models.SET_NULL, related_name='addresses')
+    awards = models.ForeignKey(Awards, blank=True, null=True, on_delete=models.SET_NULL)
+    project = models.ForeignKey(Project, blank=True, null=True, on_delete=models.SET_NULL)
+
+
+    team = models.ForeignKey(Team, blank=True, null=True,
+                             on_delete=models.SET_NULL, related_name='team')
+
+    programming_language= models.ForeignKey(ProgrammingLanguage,blank=True, null=True,
+                                            on_delete=models.SET_NULL , related_name='langaugeinfo')
+
+    experience = models.ForeignKey(Experience, blank=True, null= True,
+                                   on_delete=models.SET_NULL, related_name='experience')
+
+    expertise= models.ForeignKey(Expertise, blank=True, null= True,
+                                 on_delete=models.SET_NULL, related_name='expertise')
+
 
     # def __str__(self):
     #     return '%s' % (
@@ -71,3 +94,4 @@ class Individual(models.Model):
     #     except Exception as e:
     #         print('Exception raised::', e)
     #     return dob
+
