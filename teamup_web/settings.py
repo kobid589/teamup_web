@@ -42,16 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     #'Skills',
-
-    'login',
     'Expertise',
     'Team',
     'ProgrammingLanguage',
     'Experience',
-=======
->>>>>>> kiran
 
 ]
 
