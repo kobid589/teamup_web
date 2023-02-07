@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block main %}
+    {% with page_title='Profiles' %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock main %}
+{% block content %}
+    <div class="container">
+        <div class="profiles-container">
+            {% for individual in info_list %}
+                {#            <img src="{{ individual.photo }}" width="100%">#}
+                {% include 'partials/profile_item.html' with individual=individual %}
+                {% include 'partials/profile_item.html' with individual=individual %}
+                {% include 'partials/profile_item.html' with individual=individual %}
+                {% include 'partials/profile_item.html' with individual=individual %}
+                {% include 'partials/profile_item.html' with individual=individual %}
+                {% include 'partials/profile_item.html' with individual=individual %}
+            {% endfor %}
+        </div>
+
+    </div>
+    <br><br><br><br><br>
+{% endblock content %}

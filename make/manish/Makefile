@@ -81,7 +81,7 @@ r:
 rweb:
 	docker restart teamup_web_web_1
 
-	docker exec -it teamup_web_web_1 pip install -r dependencies/dev_requirements.txt
+	docker exec -it teamup_web_web_1 pip install -r ../dependencies/dev_requirements.txt
 msg:
 	docker exec -it teamup_web_web_1 python manage.py makemessages -l ne
 
