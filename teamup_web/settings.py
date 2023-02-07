@@ -50,9 +50,14 @@ INNER_APPS = [
     'apps.Address',
     'apps.Individual',
     'apps.Organization',
+    'apps.awards',
+    'apps.Project',
+    'apps.Highlights',
     'Skills',
     'login',
-    'apps.Expertise',
+
+    # 'apps.Expertise',
+
 ]
 
 THIRD_PARTY_APPS = [

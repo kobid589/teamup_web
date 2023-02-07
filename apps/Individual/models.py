@@ -6,6 +6,8 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from apps.Address.models import Address
+from apps.awards.models import Awards
+from apps.Project.models import Project
 from core.model_constants import GENDER, RELIGIONS, ETHNICITY
 
 
@@ -42,10 +44,9 @@ class Individual(models.Model):
     ethnicity = models.CharField(verbose_name=_('Ethnicity'), max_length=255, choices=ETHNICITY)
     # date_of_birth = models.DateField(verbose_name=_('Date of Birth'), blank=True, null=True)
     created_date = models.DateField(verbose_name=_('Time of Death'), auto_now=True)
-
-    #
-    address = models.ForeignKey(Address, blank=True, null=True,
-                            on_delete=models.SET_NULL, related_name='addresses')
+    awards = models.ForeignKey(Awards, blank=True, null=True, on_delete=models.SET_NULL)
+    project = models.ForeignKey(Project, blank=True, null=True, on_delete=models.SET_NULL)
+    address = models.ForeignKey(Address, blank=True, null=True, on_delete=models.SET_NULL, related_name='addresses')
 
     # def __str__(self):
     #     return '%s' % (
@@ -71,3 +72,4 @@ class Individual(models.Model):
     #     except Exception as e:
     #         print('Exception raised::', e)
     #     return dob
+
