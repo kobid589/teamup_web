@@ -22,6 +22,7 @@ from core.views import index
 from login import views
 from apps.Individual.views import profile
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),

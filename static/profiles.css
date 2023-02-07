@@ -21,7 +21,7 @@
     transform: scale(1.1) translateY(100px);;
 }
 
-.profile-card:hover .profile-image {
+.profile-card:hover .image-translate {
     transform: scale(1.1) translateY(-70px);
     box-shadow: 30px 30px 20px var(--shadow);
 
@@ -44,7 +44,6 @@
 
 
 .profile-image-container {
-    height: 100px;
     width: 100%;
 
     display: flex;
@@ -58,16 +57,20 @@
 .profile-image {
     height: 200px;
     width: 200px;
-    transform: translateY(-50px);
 
-    position: absolute;
+
     border-radius: 100px;
     object-fit: cover;
     border: 5px solid var(--card-background-color);
     box-shadow: 10px 10px 10px var(--shadow);
 
-    transition: all 0.2s ease-in-out;
 
+}
+
+.image-translate {
+    position: absolute;
+    transform: translateY(-50px);
+    transition: all 0.2s ease-in-out;
 }
 
 .languages-known {
