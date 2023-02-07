@@ -8,6 +8,7 @@ from django.utils.translation import gettext_lazy as _
 from apps.Address.models import Address
 from apps.awards.models import Awards
 from apps.Project.models import Project
+from apps.Organization.models import Organization
 from core.model_constants import GENDER, RELIGIONS, ETHNICITY
 
 
@@ -46,6 +47,7 @@ class Individual(models.Model):
     created_date = models.DateField(verbose_name=_('Time of Death'), auto_now=True)
     awards = models.ForeignKey(Awards, blank=True, null=True, on_delete=models.SET_NULL)
     project = models.ForeignKey(Project, blank=True, null=True, on_delete=models.SET_NULL)
+    organization = models.ForeignKey(Organization,blank=True, null=True, on_delete=models.SET_NULL)
     address = models.ForeignKey(Address, blank=True, null=True, on_delete=models.SET_NULL, related_name='addresses')
 
     # def __str__(self):
