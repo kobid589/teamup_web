@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
 ]
 
 INNER_APPS = [
@@ -60,7 +59,6 @@ INNER_APPS = [
     'Team',
     'ProgrammingLanguage',
     'Experience',
-
 ]
 
 THIRD_PARTY_APPS = [

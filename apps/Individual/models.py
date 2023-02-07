@@ -14,7 +14,7 @@ from apps.awards.models import Awards
 from apps.Project.models import Project
 from apps.Organization.models import Organization
 from core.model_constants import GENDER, RELIGIONS, ETHNICITY
-
+from apps.Expertise.models import Expertise
 
 def path_and_rename(instance, filename):
     upload_to = 'media/'
@@ -55,8 +55,7 @@ class Individual(models.Model):
                                 on_delete=models.SET_NULL, related_name='addresses')
     awards = models.ForeignKey(Awards, blank=True, null=True, on_delete=models.SET_NULL)
     project = models.ForeignKey(Project, blank=True, null=True, on_delete=models.SET_NULL)
-    organization = models.ForeignKey(Organization,blank=True, null=True, on_delete=models.SET_NULL)
-    address = models.ForeignKey(Address, blank=True, null=True, on_delete=models.SET_NULL, related_name='addresses')
+
 
     team = models.ForeignKey(Team, blank=True, null=True,
                              on_delete=models.SET_NULL, related_name='team')
@@ -66,6 +65,11 @@ class Individual(models.Model):
 
     experience = models.ForeignKey(Experience, blank=True, null= True,
                                    on_delete=models.SET_NULL, related_name='experience')
+
+    expertise= models.ForeignKey(Expertise, blank=True, null= True,
+                                 on_delete=models.SET_NULL, related_name='expertise')
+
+
     # def __str__(self):
     #     return '%s' % (
     #             self.first_name + ' - (ID : ' + self.id.__str__() + ', Generation : ' + self.get_level().__str__() + ')')
