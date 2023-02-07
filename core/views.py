@@ -4,6 +4,9 @@ from django.shortcuts import render
 
 
 # Create your views here.
+from apps.Individual.models import Individual
+
+
 def index(request):
-    # person_list = Individual.objects.all()
-    return render(request, 'index.html', context={'list': ''})
+    individual = Individual.objects.all()[0]
+    return render(request, 'index.html', context={'individual': individual})

@@ -9,7 +9,7 @@ ROOT CSS VARIABLES AND CONFIGS
     :root {
         --main-background-color: #11161a;
         --card-background-color: #1d2126;
-        --translucent-card-color : rgba(29, 33, 38, 0.8);
+        --translucent-card-color: rgba(29, 33, 38, 0.8);
         --navigation-color: var(--card-background-color);
         --border-color: rgba(255, 255, 255, 0.12);
         --primary: #4398ec;
@@ -134,7 +134,7 @@ form, label, fieldset, address {
 }
 
 body {
-    padding-top: var(--top-navigation-height);
+    /*padding-top: calc(var(--top-navigation-height) - 20px);*/
 }
 
 body, html {

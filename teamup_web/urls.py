@@ -20,7 +20,7 @@ from django.shortcuts import render
 from django.urls import path
 
 from core.views import index
-#from signup import views
+# from signup import views
 from login import views
 from apps.Individual.views import profile
 from teamup_web import settings
@@ -34,8 +34,8 @@ urlpatterns = [
 
     path('', index, name='index'),
     path('login', views.makelogin),
-    path('welcome', views.logincomplete ,name='savelogin'),
-    #path('signup', views.makesignup),
+    path('welcome', views.logincomplete, name='savelogin'),
+    # path('signup', views.makesignup),
 
 ]
 
