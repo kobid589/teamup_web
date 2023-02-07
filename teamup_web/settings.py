@@ -42,11 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'Skills',
-    'Expertise',
-    'Team',
-    'ProgrammingLanguage',
-    'Experience',
+
 
 ]
 
@@ -60,8 +56,10 @@ INNER_APPS = [
     'apps.Highlights',
     'Skills',
     'login',
-
-    # 'apps.Expertise',
+    'apps.Expertise',
+    'Team',
+    'ProgrammingLanguage',
+    'Experience',
 
 ]
 
