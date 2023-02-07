@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     #'Skills',
 
     'login',
@@ -49,6 +50,8 @@ INSTALLED_APPS = [
     'Team',
     'ProgrammingLanguage',
     'Experience',
+=======
+>>>>>>> kiran
 
 ]
 
@@ -56,7 +59,15 @@ INNER_APPS = [
     'apps.NepalAdministrativeDivision',
     'apps.Address',
     'apps.Individual',
-    'apps.Organization'
+    'apps.Organization',
+    'apps.awards',
+    'apps.Project',
+    'apps.Highlights',
+    'Skills',
+    'login',
+
+    # 'apps.Expertise',
+
 ]
 
 THIRD_PARTY_APPS = [
@@ -101,6 +112,22 @@ if os.environ.get('DJANGO_DEBUG', 'True') == 'True':
     TEMPLATES = [dev_template_config]
 else:
     TEMPLATES = [prod_template_config]
+
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [BASE_DIR / 'templates'],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    },
+]
 
 DATABASES = {
     'default': {
@@ -188,8 +215,8 @@ WEBPACK_LOADER = {
     },
 }
 
-MEDIA_URL = 'media/individual/'
-MEDIA_ROOT = os.path.join(DATA_DIR, 'media/individual/')
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(DATA_DIR, 'media/')
 
 STATIC_URL = '/public/'
 # use in deployment
