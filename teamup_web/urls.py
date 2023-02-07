@@ -25,6 +25,9 @@ from apps.Individual.views import profile
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
+    path('welcome', views.logincomplete, name='savelogin'),
+    # path('signup', views.makesignup),
+    path('', index, name='index'),
     path('profiles', profile, name='info'),
     path('login', views.makelogin),
 ]

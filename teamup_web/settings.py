@@ -42,8 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Skills',
-    'apps.Expertise',
+    #'Skills',
+
+    'login',
+    'Expertise',
+    'Team',
+    'ProgrammingLanguage',
+    'Experience',
+
 ]
 
 INNER_APPS = [
@@ -200,5 +206,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = "/dashboard/"
 LOGOUT_REDIRECT_URL = '/'
-
-
