@@ -19,11 +19,8 @@ def path_and_rename(instance, filename):
 
 # Create your models here.
 class Expertise(models.Model):
-<<<<<<< HEAD
     name = models.CharField(max_length=255, default=" ")
     description = models.CharField(max_length=255, default=" ")
-=======
     name = models.CharField(max_length=255 , default=' ')
     description = models.CharField(max_length=255, default=' ')
->>>>>>> ea34e78404be3ba9dd6824f127cb1a6bcc5dc16e
     photo = models.ImageField(upload_to=path_and_rename, null=True, blank=True)
