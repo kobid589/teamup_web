@@ -686,3 +686,16 @@ button {
     color: white;
     border-radius: 8px;
 }
+
+.nav-link-button {
+    text-decoration: none;
+
+    color: var(--primary-text);
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+.nav-link-button:hover {
+    background-color: var(--primary);
+    color: white;
+}

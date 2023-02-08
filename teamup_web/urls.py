@@ -29,7 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', index, name='index'),
-    path('profiles', profile, name='info'),
+    path('profiles', profile, name='all-profiles'),
     path('login', views.makelogin),
 
     path('', index, name='index'),
