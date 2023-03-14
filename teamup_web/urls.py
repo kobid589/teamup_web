@@ -17,7 +17,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.shortcuts import render
 
-from django.urls import path
+from django.urls import path, include
 
 from core.views import index
 # from signup import views
@@ -35,6 +35,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('login', views.makelogin),
     path('welcome', views.logincomplete, name='savelogin'),
+    path('api/', include('api.urls'))
     # path('signup', views.makesignup),
 
 ]

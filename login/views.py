@@ -4,7 +4,7 @@ from login.models import login
 
 # Create your views here.
 def makelogin(request):
-    return render(request, 'index.html')
+    return render(request, 'login.html')
 
 
 def logincomplete(request):

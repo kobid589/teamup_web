@@ -42,12 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Skills',
-    'apps.Expertise',
-    'Team',
-    'ProgrammingLanguage',
-    'Experience',
-    'login',
 
 ]
 
@@ -59,8 +53,12 @@ INNER_APPS = [
     'apps.awards',
     'apps.Project',
     'apps.Highlights',
-
-
+    'Skills',
+    'login',
+    'apps.Expertise',
+    'Team',
+    'ProgrammingLanguage',
+    'Experience',
 ]
 
 THIRD_PARTY_APPS = [
