@@ -1,21 +1,14 @@
-from django.http import HttpResponse, JsonResponse
+
 from django.urls import path
-
-from apps.Expertise.models import Expertise
-
-
-def list_room(request):
-    expertise_list = Expertise.objects.all()
-    payload = []
-    for expertise in expertise_list:
-        json_data = {
-            'id': expertise.id,
-            'name': expertise.name,
-        }
-        payload.append(json_data)
-    return HttpResponse(JsonResponse({'payload': payload}))
+from api.views import list_room, list_of_organization,\
+    list_of_highlights, list_of_awards, list_of_skills,list_of_experiences
 
 
 urlpatterns = [
     path('rooms/list', list_room, name='rooms-list'),
+    path('organisation', list_of_organization, name='org_list'),
+    path('highlights', list_of_highlights, name='highlights'),
+    path('awards', list_of_awards, name='awards'),
+    path('skills', list_of_skills, name='skills'),
+    path('experiences', list_of_experiences, name='experiences')
 ]
