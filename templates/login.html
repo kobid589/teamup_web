@@ -10,7 +10,8 @@
 <body>
     
     <div class="n9">
-        <form id='submitform' action="#" method="post">
+        <form method="POST"  action="{%  url 'savelogin'%}" id='submitform'>
+            {% csrf_token %}
             <div class="n1">
                 <label for="username">Username / Email</label>
                 <br>
