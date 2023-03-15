@@ -13,7 +13,6 @@ ud:
 
 udev:
 	docker-compose -f docker-compose.dev.yml up -d
-	cd ../../ && cd fireverse && npm run dev
 
 rdev:
 	python manage.py runserver
