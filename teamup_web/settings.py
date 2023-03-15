@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 
 from django.utils.translation import gettext_lazy as _
 from pyrebase import pyrebase
@@ -60,36 +60,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
 ]
 
 INNER_APPS = [
     'apps.NepalAdministrativeDivision',
     'apps.Address',
-    'apps.Individual',
     'apps.Organization',
-    'apps.awards',
-    'apps.Project',
-    'apps.Highlights',
-    'Skills',
-    'login',
-    'apps.Expertise',
-    'Team',
-    'ProgrammingLanguage',
-    'Experience',
+    'apps.Skill',
+    'apps.Room',
 ]
 
 THIRD_PARTY_APPS = [
     'gettext',
-    # 'phonenumber_field',
-    # 'ckeditor',
-    # 'celery',
-    # 'ckeditor_uploader',
-    # 'corsheaders',
     'rest_framework',
     'rest_framework.authtoken'
-    # 'parler',
-    # 'mptt',
 ]
 
 INSTALLED_APPS += INNER_APPS

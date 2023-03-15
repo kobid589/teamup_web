@@ -1,19 +1,11 @@
-from django.contrib.auth.models import User
 from rest_framework import serializers
 
-from Team.models import Team
-from apps.Individual.models import Individual
+from apps.Room.models import Room
 
 
-class IndividualSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Individual
-        fields = '__all__'
-
-
-class TeamSerializer(serializers.ModelSerializer):
+class RoomSerializer(serializers.ModelSerializer):
     logo = serializers.FileField(required=False)
 
     class Meta:
-        model = Team
+        model = Room
         fields = '__all__'

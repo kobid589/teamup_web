@@ -49,7 +49,7 @@ bweb:
 	docker exec -it teamup_web-web-1 bash
 
 dweb:
-	docker exec -it banshabali_db_web_1 bash
+	docker exec -it teamup_web-db-1 bash
 
 csu:
 	docker exec -it teamup_web-web-1 python manage.py createsuperuser
