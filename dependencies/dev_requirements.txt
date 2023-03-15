@@ -12,3 +12,4 @@ django-cors-headers
 django-parler
 django-nepali-datetime-field
 nepali-datetime
+pyrebase4

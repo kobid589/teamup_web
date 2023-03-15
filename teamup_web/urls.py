@@ -15,14 +15,12 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.shortcuts import render
-
 from django.urls import path, include
 
+from apps.Individual.views import profile
 from core.views import index
 # from signup import views
 from login import views
-from apps.Individual.views import profile
 from teamup_web import settings
 
 urlpatterns = [

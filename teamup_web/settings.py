@@ -13,16 +13,19 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 
+from django.utils.translation import gettext_lazy as _
+from pyrebase import pyrebase
+
+from core.utils import dev_template_config, prod_template_config
+
 gettext = lambda s: s
 
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-from django.utils.translation import gettext_lazy as _
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-from core.utils import dev_template_config, prod_template_config
 
 # SECURITY WARNING: keep the secret key used in production secret!
 with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
@@ -34,6 +37,21 @@ DEBUG = (os.environ.get('DJANGO_DEBUG', 'True') == 'True')
 ALLOWED_HOSTS = ['*']
 
 # Application definition
+
+firebaseConfig = {
+    'apiKey': "AIzaSyCA0SsSAfdhJeoywB6gFzHPgAe_EKas9R4",
+    'authDomain': "teamup-1c4d5.firebaseapp.com",
+    'projectId': "teamup-1c4d5",
+    'storageBucket': "teamup-1c4d5.appspot.com",
+    'databaseURL': "https://teamup-1c4d5-default-rtdb.firebaseio.com/",
+    'messagingSenderId': "591293928733",
+    'appId': "1:591293928733:web:0da8770145ee22cf6d3df4",
+    'measurementId': "G-3G8R9DZ64K"
+}
+
+firebase = pyrebase.initialize_app(firebaseConfig)
+auth = firebase.auth()
+database = firebase.database()
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -68,7 +86,8 @@ THIRD_PARTY_APPS = [
     # 'celery',
     # 'ckeditor_uploader',
     # 'corsheaders',
-    # 'rest_framework',
+    'rest_framework',
+    'rest_framework.authtoken'
     # 'parler',
     # 'mptt',
 ]
@@ -224,3 +243,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = "/dashboard/"
 LOGOUT_REDIRECT_URL = '/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAdminUser'
+    ),
+}

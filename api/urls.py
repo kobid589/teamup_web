@@ -1,14 +1,21 @@
+from django.urls import path, include
+from rest_framework import routers
+from rest_framework.authtoken.views import obtain_auth_token
 
-from django.urls import path
-from api.views import list_room, list_of_organization,\
-    list_of_highlights, list_of_awards, list_of_skills,list_of_experiences
+from . import views
+from .views import register_user, room_api, user_list
 
+router = routers.DefaultRouter()
+router.register(r'individuals', views.IndividualViewSet, basename="individual")
 
 urlpatterns = [
-    path('rooms/list', list_room, name='rooms-list'),
-    path('organisation', list_of_organization, name='org_list'),
-    path('highlights', list_of_highlights, name='highlights'),
-    path('awards', list_of_awards, name='awards'),
-    path('skills', list_of_skills, name='skills'),
-    path('experiences', list_of_experiences, name='experiences')
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
+    path('register/', register_user, name='user_registration'),
+    path('room/', room_api, name='rooms'),
+    path('users/', user_list, name='users'),
+    # path('rooms/', TeamView.as_view(), name='team'),
+    # path('cfu/', create_firebase_user, name='sync'),
+
 ]
