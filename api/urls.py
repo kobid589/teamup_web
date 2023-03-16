@@ -25,8 +25,8 @@ urlpatterns = [
     # Room
     path('room/', room_api, name='rooms'),  # get all rooms
     path('room/<int:pk>/', fetch_room_data, name='fetch-room'),  # get a room detail
-    path('room/<int:pk>/members/', fetch_room_members_list, name='fetch-room-members'),  # all members
-    path('room/<int:pk>/requests/', fetch_request_members_list, name='fetch-request-members'),  # all requested members
+    path('room/members/<int:pk>/', fetch_room_members_list, name='fetch-room-members'),  # all members
+    path('room/requests/<int:pk>/', fetch_request_members_list, name='fetch-request-members'),  # all requested members
     path('room/request/', request_to_join, name='request-to-join'),  # Adds to request list
     path('room/reject/', reject_request, name='reject-request'),  # Removes from request list
     path('room/accept/', accept_request, name='accept-request'),  # Adds member from request list to members list

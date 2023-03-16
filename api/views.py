@@ -13,13 +13,14 @@ from rest_framework.response import Response
 
 from apps.Room.models import Room
 from api.serializer import RoomSerializer
+from teamup_web.settings import auth
+
 
 # =========================================
 #
 # ROOM
 #
 # =========================================
-from teamup_web.settings import auth
 
 
 @api_view(['POST', 'GET'])
@@ -29,6 +30,8 @@ from teamup_web.settings import auth
 def room_api(request):
     if request.method == "POST":
         # sanitize filename to prevent path traversal attacks
+        print("\n --------- Current user ---------\n")
+        print(request.user)
         serializer = RoomSerializer(data=request.data)
         if serializer.is_valid():
             if request.FILES:
@@ -43,7 +46,7 @@ def room_api(request):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     if request.method == "GET":
-        rooms = Room.objects.filter(user=request.user).filter(user__room_members__user=request.user)
+        rooms = Room.objects.filter(Q(user=request.user) | Q(members__username=request.user.username))
         serializer = RoomSerializer(rooms, many=True)
         return Response(serializer.data)
 
@@ -160,9 +163,8 @@ def fetch_all_team_up_request(request):
     print(rooms)
     print(len(rooms))
     if len(rooms) > 0:
-        serializer = RoomSerializer(data=rooms, many=True)
-        if serializer.is_valid():
-            return Response(serializer.data, status.HTTP_200_OK)
+        serializer = RoomSerializer(rooms, many=True)
+        return Response(serializer.data, status.HTTP_200_OK)
     return Response({'message': 'No Request Found.', 'user': get_user_json(user)},
                     status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -192,10 +194,8 @@ def register_user(request):
     try:
         firebase_user = auth.create_user_with_email_and_password(email, password)
         id_token = firebase_user['idToken']
-        print(id_token)
         if first_name and last_name:
             auth.update_profile(id_token=firebase_user['idToken'], display_name=first_name + ' ' + last_name)
-        # print(firebase_user["idToken"])
     except Exception as e:
         print(e)
         return Response({'error': 'Failed to create Firebase user.'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -220,7 +220,7 @@ def register_user(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def user_list(request):
-    users = User.objects.filter(is_superuser=False)
+    users = User.objects.filter(Q(is_superuser=False) & ~Q(username=request.user.username))
     return Response(get_user_json_from_list(users))
 
 
@@ -269,3 +269,17 @@ def get_user_json_from_list(users):
         'results': [get_user_json(user) for user in users]
     }
     return data
+
+# =========================================
+#
+# Skills
+#
+# =========================================
+
+# Add Skills to user
+
+# Get user specific skills
+
+# Filter User by skills
+
+#
