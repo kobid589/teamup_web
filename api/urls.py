@@ -4,7 +4,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 from .views import register_user, room_api, user_list, fetch_room_data, fetch_room_members_list, request_to_join, \
     fetch_user_data, fetch_request_members_list, reject_request, accept_request, fetch_all_team_up_request, \
-    remove_member
+    remove_member, add_skills_to_user, remove_skills_from_user, get_users, fetch_skills_for_user
 
 router = routers.DefaultRouter()
 
@@ -33,11 +33,10 @@ urlpatterns = [
     path('room/remove-member/', remove_member, name='remove-member'),  # Removes member from team
     path('room/all-requests/', fetch_all_team_up_request, name='all-request'),  # shows all request for current user
     # Skill
-    path('skills/', dummy, name='skills'),  #
-    # path('skills/add/', dummy, name='skill-add'),  # The superuser predefines skills
-    path('skills/<id>', dummy, name='skill-detail'),  #
-    path('skills/<id>', dummy, name='skill-update'),  #
-    path('skills/<id>/delete', dummy, name='skill-delete'),  #
+    path('skills/add/', add_skills_to_user, name='add-skill'),  #
+    path('skills/remove/', remove_skills_from_user, name='remove-skill'),  #
+    path('skills/get/<id>/', fetch_skills_for_user, name='fetch-skills'),  #
+    path('skills/users/<id>/', get_users, name='get-skill-user'),  #
     # Tools
 
     # Organizations

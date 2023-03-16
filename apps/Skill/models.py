@@ -10,7 +10,7 @@ def skill_path(instance, filename):
     ext = filename.split('.')[-1]
     # get filename
     if instance.pk:
-        filename = 'skill_photo_{}_.{}'.format(instance.pk, ext)
+        filename = 'skill_photo{}.{}'.format(instance.pk, ext)
     else:
         # set filename as random string
         filename = '{}.{}'.format(uuid4().hex, ext)

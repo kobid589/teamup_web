@@ -12,7 +12,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from apps.Room.models import Room
-from api.serializer import RoomSerializer
+from api.serializer import RoomSerializer, SkillSerializer
+from apps.Skill.models import Skill
 from teamup_web.settings import auth
 
 
@@ -270,6 +271,7 @@ def get_user_json_from_list(users):
     }
     return data
 
+
 # =========================================
 #
 # Skills
@@ -277,9 +279,59 @@ def get_user_json_from_list(users):
 # =========================================
 
 # Add Skills to user
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def add_skills_to_user(request):
+    skill_id = request.data['skill_id']
+    skill = Skill.objects.get(id=skill_id)
+    uid = request.data['uid']
+    user = User.objects.get(username=uid)
+    if skill and user:
+        if skill.users.contains(user):
+            return Response({'message': 'Skill already added'}, status.HTTP_200_OK)
+        skill.users.add(user)
+        return Response({'message': 'Skills added successfully'}, status.HTTP_200_OK)
+    return Response({'message': 'Could not add skills'}, status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+# Remove Skill from user
+# Add Skills to user
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def remove_skills_from_user(request):
+    skill_id = request.data['skill_id']
+    skill = Skill.objects.get(id=skill_id)
+    uid = request.data['uid']
+    user = User.objects.get(username=uid)
+    if skill and user:
+        if skill.users.contains(user):
+            skill.users.remove(user)
+            return Response({'message': 'Skill removed successfully'}, status.HTTP_200_OK)
+        return Response({'message': 'User does not have the skill'}, status.HTTP_200_OK)
+    return Response({'message': 'Could not remove skills'}, status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
 # Get user specific skills
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def fetch_skills_for_user(request, id):
+    user = User.objects.get(username=id)
+    skills = Skill.objects.filter(Q(users__isnull=False) & Q(users__username=user.username))
+    print(skills)
+    print(len(skills))
+    if len(skills) > 0:
+        serializer = SkillSerializer(skills, many=True)
+        return Response(serializer.data, status.HTTP_200_OK)
+    return Response({'message': 'No skills Found.', 'user': get_user_json(user)},
+                    status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
 # Filter User by skills
-
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_users(request, id):
+    skill = Skill.objects.get(id=id)
+    get_user_json_from_list(skill.users.all())
+    return Response(get_user_json_from_list(skill.users.all()),
+                    status.HTTP_200_OK)
 #

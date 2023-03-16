@@ -9,3 +9,11 @@ class RoomSerializer(serializers.ModelSerializer):
     class Meta:
         model = Room
         fields = '__all__'
+
+
+class SkillSerializer(serializers.ModelSerializer):
+    logo = serializers.FileField(required=False)
+
+    class Meta:
+        model = Room
+        fields = '__all__'
