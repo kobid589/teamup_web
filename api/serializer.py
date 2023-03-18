@@ -17,3 +17,11 @@ class SkillSerializer(serializers.ModelSerializer):
     class Meta:
         model = Room
         fields = '__all__'
+
+
+class ToolSerializer(serializers.ModelSerializer):
+    logo = serializers.FileField(required=False)
+
+    class Meta:
+        model = Room
+        fields = '__all__'

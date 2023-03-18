@@ -33,8 +33,12 @@ with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DJANGO_DEBUG', 'True') == 'True')
+if DEBUG:
+    ALLOWED_HOSTS = ['*']
+else:
+    ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS = ['*']
+
 
 # Application definition
 
@@ -60,6 +64,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders'
 ]
 
 INNER_APPS = [
@@ -68,6 +73,7 @@ INNER_APPS = [
     'apps.Organization',
     'apps.Skill',
     'apps.Room',
+    'apps.Tool',
 ]
 
 THIRD_PARTY_APPS = [
@@ -236,3 +242,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAdminUser'
     ),
 }
+
+CORS_ORIGIN_WHITELIST = ['http://localhost:4000', ]

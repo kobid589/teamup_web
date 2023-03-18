@@ -12,8 +12,9 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from apps.Room.models import Room
-from api.serializer import RoomSerializer, SkillSerializer
+from api.serializer import RoomSerializer, SkillSerializer, ToolSerializer
 from apps.Skill.models import Skill
+from apps.Tool.models import Tool
 from teamup_web.settings import auth
 
 
@@ -329,9 +330,72 @@ def fetch_skills_for_user(request, id):
 # Filter User by skills
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
-def get_users(request, id):
+def get_users_by_skill(request, id):
     skill = Skill.objects.get(id=id)
     get_user_json_from_list(skill.users.all())
     return Response(get_user_json_from_list(skill.users.all()),
                     status.HTTP_200_OK)
+
+
+# =========================================
 #
+# Tools
+#
+# =========================================
+
+# Add Tools to user
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def add_tools_to_user(request):
+    tool_id = request.data['tool_id']
+    tool = Tool.objects.get(id=tool_id)
+    uid = request.data['uid']
+    user = User.objects.get(username=uid)
+    if tool and user:
+        if tool.users.contains(user):
+            return Response({'message': 'Tool already added'}, status.HTTP_200_OK)
+        tool.users.add(user)
+        return Response({'message': 'Tools added successfully'}, status.HTTP_200_OK)
+    return Response({'message': 'Could not add tools'}, status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+# Remove Tool from user
+# Add Tools to user
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def remove_tools_from_user(request):
+    tool_id = request.data['tool_id']
+    tool = Tool.objects.get(id=tool_id)
+    uid = request.data['uid']
+    user = User.objects.get(username=uid)
+    if tool and user:
+        if tool.users.contains(user):
+            tool.users.remove(user)
+            return Response({'message': 'Tool removed successfully'}, status.HTTP_200_OK)
+        return Response({'message': 'User does not have the tool'}, status.HTTP_200_OK)
+    return Response({'message': 'Could not remove tools'}, status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+# Get user specific tools
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def fetch_tools_for_user(request, id):
+    user = User.objects.get(username=id)
+    tools = Tool.objects.filter(Q(users__isnull=False) & Q(users__username=user.username))
+    print(tools)
+    print(len(tools))
+    if len(tools) > 0:
+        serializer = ToolSerializer(tools, many=True)
+        return Response(serializer.data, status.HTTP_200_OK)
+    return Response({'message': 'No tools Found.', 'user': get_user_json(user)},
+                    status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+# Filter User by tools
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_users_by_tool(request, id):
+    tool = Tool.objects.get(id=id)
+    get_user_json_from_list(tool.users.all())
+    return Response(get_user_json_from_list(tool.users.all()),
+                    status.HTTP_200_OK)
