@@ -1,9 +1,5 @@
-from django.shortcuts import render
-
-# from core.models import Individual
+from django.http import HttpResponse
 
 
-# Create your views here.
 def index(request):
-    # person_list = Individual.objects.all()
-    return render(request, 'index.html', context={'list': ''})
+    return HttpResponse('Welcome to team up :) !')

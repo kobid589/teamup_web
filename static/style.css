@@ -1,0 +1,80 @@
+body{
+  background: #4CAF50;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: #4CAF50;
+
+}
+div.n1{
+    padding: 20px 0px;
+    
+   
+}
+
+div.n2{
+    margin:20px 0px;
+}
+div.n4{
+    margin:30px 0px;
+}
+div a.n3{
+    padding-left: 250px;
+}
+input[type=text]{
+    width: 95%;
+    padding: 12px 0px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-color:black;
+    outline-color: #4CAF50;
+    font-size: 20px;
+}
+input[type=password]{
+    width: 95%;
+    padding: 12px 0px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-color:black;
+    outline-color: #4CAF50;
+    font-size: 20px;
+}
+
+
+div button.n6 {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 42%;
+    text-align: center;
+    font-size:16px;
+    border-radius: 5px;
+
+  }
+
+  p{
+    margin-top: 30px;
+    margin-left: 111px;
+  }
+  
+
+div.n9{
+    margin-top: 100px;
+    margin-left: 30%;
+    margin-right: 35%;
+    border-radius: 5px;
+    padding-left: 20px;
+    justify-content: center;
+    background-color: white;
+
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+</head>
+<body>
+    
+    <div class="n9">
+        <form method="POST"  action="{%  url 'savelogin'%}" id='submitform'>
+            {% csrf_token %}
+            <div class="n1">
+                <label for="username">Username / Email</label>
+                <br>
+                <input type="text">
+            </div>
+
+            <div class="n2">
+                <label for="password">Password
+                    <a href="#" class="n3">Forgot?</a>
+                    <br>
+                <input type="password">
+                </label>
+            </div>
+
+            <div  class="n4">
+                <input type="checkbox">
+                <label for="checbox">Remember me?</label>
+            </div>
+
+            <div class="n5">
+                <button class="n6" type="submit">Log In</button> <!--submit garexi kaha jane is determined by the action in the form tag-->
+            </div>
+
+        </form>
+
+        <p class="n7"> 
+            <span class="n8">Not a member?</span>
+            <a href="#">Sign Up</a>
+        </p>
+
+    </div>
+</body>
+
+</html>

@@ -1,19 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1>Profiles</h1>
-<ol>
-    {% for profile in list %}
-        <li>{{ profile.first_name }}</li>
-    {% endfor %}
-</ol>
-
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <br>
+    <div class="container" style="height:calc(100% - var(--top-navigation-height) - 60px)">
+        <div class="row" style="height: 100%;">
+            <div class="col-md-8 col-lg-8 col-sm-12" style="height: 100%;">
+                <div class="panel">
+                    {% include 'partials/dashboard/rooms_list.html' %}
+                    {#                                        {% include 'partials/dashboard/no_rooms_section.html' %}#}
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-12" style="height:100%;">
+                {% include 'partials/dashboard/profile_panel.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,3 +1,6 @@
+import os
+from uuid import uuid4
+
 dev_template_config = {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': ['templates'],
@@ -45,3 +48,5 @@ prod_template_config = {
         ]
     },
 }
+
+

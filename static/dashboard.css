@@ -1,0 +1,152 @@
+.panel {
+    border-radius: 20px;
+    background-color: var(--card-background-color);
+
+    overflow-y: auto;
+    height: 100%;
+}
+
+*::-webkit-scrollbar {
+    background-color: var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 3px;
+    width:4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--tertiary-text);
+    width: 3px;
+    border-radius: 10px;
+}
+
+.no-rooms-page {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.empty-info-text {
+    color: var(--tertiary-text)
+}
+
+.empty-info-heading {
+    color: var(--tertiary-text)
+}
+
+.add-button {
+    height: 100px;
+    width: 100px;
+
+    cursor: pointer;
+
+    border-radius: 100px;
+
+    background-color: var(--primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease-in-out;
+
+}
+
+.add-button:hover {
+    transform: scale(1.2);
+    box-shadow: 10px 20px 20px var(--shadow);
+}
+
+
+/*Rooms List */
+
+.list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 20px;
+    background-color: var(--shadow);
+    border-radius: 20px 20px 0 0;
+}
+
+.room-member-preview {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 30px;
+    transform: translateX(10px);
+}
+
+.room-member-image-sm {
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+}
+
+.room-member-preview:first-child .room-member-image-sm {
+    /*position: absolute;*/
+    transform: translateX(0px);
+}
+
+.room-member-preview:nth-child(even) img {
+    /*position: absolute;*/
+    height: 40px;
+    transform: translateX(-10px);
+}
+
+.room-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 40px;
+}
+
+.room-list-item {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--card-background-color);
+    /*box-shadow: 3px 3px 3px var(--shadow);*/
+
+    border: 1px solid var(--border-color);
+
+    transition: all 0.1s ease-in-out;
+}
+
+.room-list-item:hover {
+    transform: scale(1.08);
+    background-color:var(--shadow);
+    border: 1px solid transparent;
+    box-shadow: 10px 10px 20px var(--shadow)
+}
+
+.plus-more-members {
+    background-color: var(--border-color);
+    height: 30px;
+    width: 30px;
+
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.room-info {
+    display: flex;
+    gap: 10px;
+}
+
+.team-logo {
+    height: 40px;
+    width: 40px;
+
+    border-radius: 20px;
+}
+
+.no-of-members {
+    font-size: 0.8rem;
+    color: var(--tertiary-text)
+}
