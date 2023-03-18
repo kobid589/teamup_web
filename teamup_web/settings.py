@@ -36,9 +36,7 @@ DEBUG = (os.environ.get('DJANGO_DEBUG', 'True') == 'True')
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = ['*']
-
-
+    ALLOWED_HOSTS = ['http://5.189.132.142']
 
 # Application definition
 
@@ -243,4 +241,7 @@ REST_FRAMEWORK = {
     ),
 }
 
-CORS_ORIGIN_WHITELIST = ['http://localhost:4000', ]
+if DEBUG:
+    CORS_ORIGIN_WHITELIST = ['http://localhost:4000']
+else:
+    CORS_ORIGIN_WHITELIST = ['http://5.189.132.142']
