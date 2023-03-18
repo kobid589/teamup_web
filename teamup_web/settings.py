@@ -242,6 +242,6 @@ REST_FRAMEWORK = {
 }
 
 if DEBUG:
-    CORS_ORIGIN_WHITELIST = ['http://localhost:4000', 'https://teamup-1c4d5.web.app']
+    CORS_ORIGIN_WHITELIST = ['http://localhost:4000', 'https://teamup-1c4d5.web.app', 'http://5.189.132.142']
 else:
     CORS_ORIGIN_WHITELIST = ['http://5.189.132.142', 'https://teamup-1c4d5.web.app']
