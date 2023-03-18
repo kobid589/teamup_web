@@ -15,27 +15,16 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.shortcuts import render
-
 from django.urls import path, include
 
 from core.views import index
 # from signup import views
-from login import views
-from apps.Individual.views import profile
 from teamup_web import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-
-
-    path('profiles', profile, name='info'),
-
     path('', index, name='index'),
-    path('login', views.makelogin),
-    path('welcome', views.logincomplete, name='savelogin'),
-    path('api/', include('api.urls'))
-    # path('signup', views.makesignup),
+    path('api/', include('api.urls')),
+    path('admin/', admin.site.urls, name='admin'),
 
 ]
 

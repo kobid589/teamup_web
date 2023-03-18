@@ -36,6 +36,10 @@
 
                 <div class="col-sm-12 col-md-4 col-lg-3">
                     <div class="actions">
+                        {% block actions %}{% endblock actions %}
+                        <div class="links">
+                            <a href="{% url 'all-profiles' %}" class="nav-link-button"><i class="fa fa-fire" style="margin-right:10px; color:var(--tertiary-text)"></i>Explore</a>
+                        </div>
                         {% include 'partials/profile_dropdown.html' %}
                     </div>
 
